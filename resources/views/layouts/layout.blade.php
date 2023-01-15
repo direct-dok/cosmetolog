@@ -8,9 +8,9 @@
     <meta name="keywords" content="@yield('meta_keywords')">
     <meta name="author" content="elemis">
     <title>@yield('seo_title')</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.png">
-    <link rel="stylesheet" href="./assets/css/plugins.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="{{ asset('/assets/img/favicon.png') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/plugins.css') }}">
+    <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
 </head>
 
 <body>
