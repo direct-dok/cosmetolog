@@ -48,6 +48,7 @@
                 <!-- /.form-floating -->
 
                 <button class="btn btn-blue rounded-pill" type="submit">Добавить</button>
+                <a href="{{ route('all.pages') }}" class="btn btn-soft-blue rounded-pill">Отмена</a>
             </form>
         </div>
     </section>
