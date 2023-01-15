@@ -1,6 +1,14 @@
 /node_modules
 /public/hot
 /public/storage
+/public/assets/img/avatars
+/public/assets/img/brands
+/public/assets/img/demos
+/public/assets/img/docs
+/public/assets/img/icons
+/public/assets/img/illustrations
+/public/assets/img/photos
+/public/assets/img/svg
 /storage/*.key
 /vendor
 .env
