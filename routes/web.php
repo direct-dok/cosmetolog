@@ -19,7 +19,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', [PageController::class, 'index'])->name('front.page');
-Route::get('/{slug}', [PageController::class, 'show_page'])->name('front.page');
+Route::get('/{slug}', [PageController::class, 'show_page'])->name('one.page');
 
 Route::get('/page/add', [PageController::class, 'show_create_page'])->name('create.page');
 Route::post('/page/save', [PageController::class, 'save_page'])->name('save.page');

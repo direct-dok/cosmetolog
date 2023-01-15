@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Page;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -17,19 +17,23 @@ class PageController extends Controller
 
     public function show_page($slug)
     {
-
         $page = Page::where('slug', '=', $slug)->first();
-        if($slug == 'front-page') return view('page', ['front_page' => true, 'page' => $page]);
+        if(is_null($page)) {
+            abort(404);
+        }
+        if($slug == 'front-page') return redirect()->route('front.page');
         return view('page', ['front_page' => false, 'page' => $page]);
     }
 
     public function show_create_page()
     {
+        $this->authorize('access-crud-page', [self::class]);
         return view('add_page');
     }
 
     public function save_page(Request $request)
     {
+        $this->authorize('access-crud-page', [self::class]);
         $data_page = [
             'title' => $request->title,
             'subtitle' => $request->subtitle,
@@ -46,6 +50,7 @@ class PageController extends Controller
 
     public function update_page(Request $request, $id)
     {
+        $this->authorize('access-crud-page', [self::class]);
         $page = Page::find($id);
 
         $page->title = $request->title;
@@ -60,24 +65,28 @@ class PageController extends Controller
 
     public function all_pages()
     {
+        $this->authorize('access-crud-page', [self::class]);
         $pages = Page::all();
         return view('admin.all_pages', ['pages' => $pages]);
     }
 
     public function edit_page($id)
     {
+        $this->authorize('access-crud-page', [self::class]);
         $page = Page::where('id', '=', $id)->first();
         return view('admin.edit_page', ['page' => $page]);
     }
 
     public function show_delete_page($id)
     {
+        $this->authorize('access-crud-page', [self::class]);
         $page = Page::where('id', '=', $id)->first();
         return view('admin.delete_page', ['page' => $page]);
     }
 
     public function delete_page($id)
     {
+        $this->authorize('access-crud-page', [self::class]);
         $page = Page::where('id', '=', $id)->first();
         $page->delete();
         return redirect()->route('all.pages');
