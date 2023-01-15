@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', [PageController::class, 'index'])->name('front.page');
+Route::get('/{slug}', [PageController::class, 'show_page'])->name('front.page');
+
+Route::get('/page/add', [PageController::class, 'show_create_page'])->name('create.page');
+Route::post('/page/save', [PageController::class, 'save_page'])->name('save.page');
+Route::put('/page/update/{id}', [PageController::class, 'update_page'])->name('update.page');
+Route::get('/page/all', [PageController::class, 'all_pages'])->name('all.pages');
+Route::get('/page/edit/{id}', [PageController::class, 'edit_page'])->name('edit.page');
+
+
+
+
