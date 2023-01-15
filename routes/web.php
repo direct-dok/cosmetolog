@@ -26,6 +26,8 @@ Route::post('/page/save', [PageController::class, 'save_page'])->name('save.page
 Route::put('/page/update/{id}', [PageController::class, 'update_page'])->name('update.page');
 Route::get('/page/all', [PageController::class, 'all_pages'])->name('all.pages');
 Route::get('/page/edit/{id}', [PageController::class, 'edit_page'])->name('edit.page');
+Route::get('/page/delete/{id}', [PageController::class, 'show_delete_page'])->name('show.delete.page');
+Route::delete('/page/delete/{id}', [PageController::class, 'delete_page'])->name('delete.page');
 
 
 

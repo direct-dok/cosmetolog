@@ -13,6 +13,7 @@
                     <th scope="col">Заголовок</th>
                     <th scope="col">Ссылка</th>
                     <th scope="col">Ред.</th>
+                    <th scope="col">Удал.</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -22,6 +23,7 @@
                     <td>{{ $page->title }}</td>
                     <td><a href="/{{ $page->slug }}" target="_blank">Посмотреть</a></td>
                     <td><a href="{{ route('edit.page', ['id' => $page->id]) }}" class="btn btn-circle btn-primary btn-sm"><i class="uil uil-edit-alt"></i></a></td>
+                    <td><a href="{{ route('show.delete.page', ['id' => $page->id]) }}" class="btn btn-circle btn-red btn-sm"><i class="uil uil-trash-alt"></i></a></td>
                 </tr>
 
             @endforeach

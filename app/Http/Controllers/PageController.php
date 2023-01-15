@@ -34,14 +34,14 @@ class PageController extends Controller
             'title' => $request->title,
             'subtitle' => $request->subtitle,
             'body' => $request->body,
-            'seo_title' => $request->meta_title,
+            'seo_title' => $request->seo_title,
             'meta_description' => $request->meta_description,
             'meta_keywords' => $request->meta_keywords,
         ];
 
         Page::create($data_page);
 
-        return 'save_page';
+        return redirect()->route('all.pages');
     }
 
     public function update_page(Request $request, $id)
@@ -68,5 +68,18 @@ class PageController extends Controller
     {
         $page = Page::where('id', '=', $id)->first();
         return view('admin.edit_page', ['page' => $page]);
+    }
+
+    public function show_delete_page($id)
+    {
+        $page = Page::where('id', '=', $id)->first();
+        return view('admin.delete_page', ['page' => $page]);
+    }
+
+    public function delete_page($id)
+    {
+        $page = Page::where('id', '=', $id)->first();
+        $page->delete();
+        return redirect()->route('all.pages');
     }
 }
