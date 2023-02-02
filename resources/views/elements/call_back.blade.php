@@ -7,7 +7,7 @@
 <div class="modal fade" id="modal-call-back" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content text-center">
-            <div class="modal-body">
+            <div class="modal-body py-9 px-4 sm-p-8">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <p class="lead mb-2 text-start">Есть вопросы? Нужна консультация по процедурам?</p>
                 <h2 class="mb-3 text-start">Закажите обратный звонок</h2>
