@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::group(['prefix' => 'v1'], function () {
+    Route::post('message/send', [MessageController::class, 'send_message']);
+});
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+//Route::resource('blogs', MessageController::class);
+//Route::apiResource('/blogs', MessageController::class)->only([
+//    'index', 'show', 'store', 'update', 'destroy'
+//]);
