@@ -20,8 +20,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/#cabinet">Кабинет</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/#services">Услуги</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" data-bs-toggle="dropdown">Услуги</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="dropdown-item" href="/chistka-lica-v-chelyabinske">Чистка лица</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="/biorepil-v-chelyabinske">Биорепил</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/kontakty">Контакты</a>
