@@ -1,6 +1,10 @@
-let callBackForm = document.querySelector('.csm-call-back-form');
+let allForms = document.querySelectorAll('.csm-call-back-form');
 
-callBackForm.addEventListener('submit', function(event) {
+for(let i = 0; allForms.length >= i; i++) {
+    allForms[i].addEventListener('submit', prepareData);
+}
+
+function prepareData(event) {
     event.preventDefault();
     let inputsForm = event.target.querySelectorAll('.form-control');
     let resultValidate = validateForm(inputsForm);
@@ -8,7 +12,7 @@ callBackForm.addEventListener('submit', function(event) {
         let objectInputValues = getFormValues(inputsForm);
         sendMessage(objectInputValues, event.target);
     }
-});
+}
 
 function validateForm(inputs) {
     let errors = 0;
