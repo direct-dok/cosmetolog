@@ -61,6 +61,7 @@ class PageController extends Controller
         $page->meta_keywords = $request->meta_keywords;
 
         $page->save();
+        return redirect()->route('all.pages');
     }
 
     public function all_pages()
