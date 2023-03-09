@@ -1,0 +1,53 @@
+.first-screen {
+    height: 650px;
+    background: $backgrount-first-screen;
+    margin: 0 -10px;
+    position: relative;
+    margin-bottom: 70px;
+
+    &__background-img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__overlay-background-img {
+        background: $backgrount-first-screen;
+        opacity: .7;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+
+    &__content {
+        display: flex;
+        align-items: stretch;
+    }
+
+    &__left {
+
+    }
+
+    &__right {
+
+    }
+
+    &__left,
+    &__right {
+        flex: 1 1 50%;
+    }
+}

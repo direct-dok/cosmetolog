@@ -11,7 +11,6 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.js('resources/js/app.js', 'public/js');
+mix.sass('resources/scss/style.scss', 'public/css');
+mix.sass('resources/scss/page-elements.scss', 'public/css');

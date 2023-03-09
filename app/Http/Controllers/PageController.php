@@ -12,7 +12,7 @@ class PageController extends Controller
     public function index()
     {
         $page = Page::where('slug', '=', 'front-page')->first();
-        return view('page', ['front_page' => true, 'page' => $page]);
+        return view('page', ['page' => $page]);
     }
 
     public function show_page($slug)
@@ -22,7 +22,7 @@ class PageController extends Controller
             abort(404);
         }
         if($slug == 'front-page') return redirect()->route('front.page');
-        return view('page', ['front_page' => false, 'page' => $page]);
+        return view('page', ['page' => $page]);
     }
 
     public function show_create_page()
@@ -41,6 +41,7 @@ class PageController extends Controller
             'seo_title' => $request->seo_title,
             'meta_description' => $request->meta_description,
             'meta_keywords' => $request->meta_keywords,
+            'type_page_landing' => $request->type_page_landing ? 1 : 0,
         ];
 
         Page::create($data_page);
@@ -59,6 +60,7 @@ class PageController extends Controller
         $page->seo_title = $request->seo_title;
         $page->meta_description = $request->meta_description;
         $page->meta_keywords = $request->meta_keywords;
+        $page->type_page_landing = $request->type_page_landing ? 1 : 0;
 
         $page->save();
         return redirect()->route('all.pages');

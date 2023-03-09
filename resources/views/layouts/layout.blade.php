@@ -9,19 +9,20 @@
     <meta name="author" content="elemis">
     <title>@yield('seo_title')</title>
     <link rel="shortcut icon" href="{{ asset('/assets/img/favicon.png') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/plugins.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('/assets/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/page-elements.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=Montserrat:wght@300;400;500;700;800;900&family=Poppins:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+{{--    <link rel="stylesheet" href="{{ asset('/assets/css/style.css') }}">--}}
+{{--    <link rel="stylesheet" href="{{ asset('/assets/css/app.css') }}">--}}
 </head>
 
 <body>
 <div class="content-wrapper">
-@if(isset($front_page) && $front_page)
-    @include('elements.front_header')
-@else
-    @include('elements.page_header')
-@endif
-
+@include('elements.page_header')
+<div class="content-block">
 @yield('content')
+</div>
 
 @include('elements.footer')

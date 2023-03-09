@@ -1,0 +1,36 @@
+.input-active {}
+
+.input {
+    position: relative;
+
+    &__label {
+        position: absolute;
+        top: 13px;
+        left: 15px;
+        font-size: $font-size-label-16;
+        font-weight: 400;
+        color: $color-form-label;
+        margin-bottom: 5px;
+        transition: top .2s, font-size .2s;
+    }
+
+    &__label.input__label_min_top {
+        transition: top .2s, font-size .2s;
+        top: 5px;
+        font-size: $font-size-label-min;
+    }
+
+    &__text {
+        width: 100%;
+        height: 48px;
+        padding: 20px 0 10px 15px;
+        box-sizing: border-box;
+        outline: none;
+        border: 1px solid $color-border-input;
+        border-radius: 4px;
+    }
+    &__text:focus {
+        border: 1px solid $color-border-input-focus;
+    }
+
+}

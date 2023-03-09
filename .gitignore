@@ -11,6 +11,7 @@
 /public/assets/img/svg
 /public/assets/img/landing/pages
 /public/assets/media
+/public/img
 /storage/*.key
 /vendor
 .env
