@@ -1,0 +1,21 @@
+.block-simple {
+
+    &__head {
+        text-align: center;
+    }
+
+    &__title {
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__subcaption {
+        max-width: 250px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        @include adaptiv-font(.8, 1.1);
+        color: $color-form-label;
+        font-weight: 500;
+    }
+}

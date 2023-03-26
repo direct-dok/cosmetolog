@@ -1,0 +1,117 @@
+.button-element {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.button-md {
+    @include adaptiv-font(.85, 1);
+    font-weight: 500;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+// Colors Btn
+
+.btn-color-blue {
+    background-color: $background-btn-blue;
+    transition: background-color .2s .1s;
+    color: $color-white;
+}
+
+.btn-color-blue:hover {
+    background-color: $background-btn-blue-hover;
+    transition: background-color .2s .1s;
+}
+
+// Start close button
+.close-button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    //z-index: 7;
+    //overflow: hidden;
+
+    &:hover {
+        & .close-button__content {
+            &::before,
+            &::after {
+                background: $background-cod-gray;
+                transition: background .15s .1s;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+
+        &::before,
+        &::after {
+            content: " ";
+            position: absolute;
+            display: block;
+            width: 40px;
+            height: 1px;
+            background: $background-emperor;
+            transition: background .15s .1s;
+        }
+
+        &::before {
+            transform: rotate(45deg) translate(13px, 14px);
+        }
+
+        &::after {
+            transform: rotate(-45deg) translate(-13px, 14px);
+        }
+    }
+}
+
+.close-button-position {
+    @include position-top(10px);
+    @include position-right(10px);
+}
+// End close button
+
+
+/* Phone Button */
+.csm-call-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 25px;
+    bottom: 90px;
+    background: $background-blue;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: radial-pulse 1.3s infinite;
+    z-index: 5;
+
+    &__circle {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .csm-call-back {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@keyframes radial-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(63, 120, 224, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 30px rgba(100, 152, 245, 0);
+    }
+}

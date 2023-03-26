@@ -9,7 +9,7 @@
         background: none;
         cursor: pointer;
         overflow: hidden;
-        z-index: 1;
+        z-index: 4;
         transition: height .1s .32s;
 
         &::before {
@@ -44,7 +44,7 @@
         &.navigation__block_show_navigation {
             height: 42px;
             transition: height .1s .32s;
-            z-index: 1;
+            z-index: 4;
 
             & > span:nth-child(1) {
                 width: 0%;
@@ -117,6 +117,7 @@
     background: #e9e9e9;
     transition: bottom .4s .2s;
     padding: 200px 10px 50px 10px;
+    z-index: 3;
 
     @media screen and (max-width: 768px) {
         padding: 140px 10px 10px 10px;
@@ -347,30 +348,11 @@
     }
 
     &__contact-content {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+
     }
 
     &__contact-item {
-        display: flex;
-        margin-bottom: 30px;
 
-        & > div {
-            margin-left: 15px;
-
-            @media screen and (max-width: 768px) {
-                margin: 0;
-            }
-        }
-
-        & > div p {
-            margin: 0;
-        }
-
-        @media screen and (max-width: 768px) {
-            display: block;
-        }
     }
 
     &__contact-subtitle {

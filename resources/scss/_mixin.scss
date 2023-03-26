@@ -17,3 +17,19 @@ $widthMax: 1320;
         font-size: $valueMax * 1rem;
     }
 }
+
+@mixin position-top($value) {
+    top: $value;
+}
+
+@mixin position-right($value) {
+    right: $value;
+}
+
+@mixin position-left($value) {
+    left: $value;
+}
+
+@mixin position-bottom($value) {
+    bottom: $value;
+}

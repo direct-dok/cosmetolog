@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="{{ asset('/assets/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/page-elements.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/swiper.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&family=Montserrat:wght@300;400;500;700;800;900&family=Poppins:wght@300;400&family=Roboto&display=swap" rel="stylesheet">

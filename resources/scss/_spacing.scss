@@ -1,0 +1,154 @@
+.mb-5 {
+    margin-bottom: 5px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-25 {
+    margin-bottom: 25px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-35 {
+    margin-bottom: 35px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.mb-45 {
+    margin-bottom: 45px;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+.mb-55 {
+    margin-bottom: 55px;
+}
+.mb-60 {
+    margin-bottom: 60px;
+}
+.mb-65 {
+    margin-bottom: 65px;
+}
+.mb-70 {
+    margin-bottom: 70px;
+}
+.mb-75 {
+    margin-bottom: 75px;
+}
+.mb-80 {
+    margin-bottom: 80px;
+}
+.mb-85 {
+    margin-bottom: 85px;
+}
+.mb-90 {
+    margin-bottom: 90px;
+}
+.mb-95 {
+    margin-bottom: 95px;
+}
+.mb-100 {
+    margin-bottom: 100px;
+}
+.mb-105 {
+    margin-bottom: 105px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.p-b-5 {
+    padding-bottom: 5px;
+}
+
+.p-y-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.p-y-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.p-y-40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.p-y-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.p-x-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.p-x-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+// sm-breakpoints
+
+@media screen and (min-width: 576px) {
+    .mb-sm-15 {
+        margin-bottom: 15px !important;
+    }
+    .mb-sm-20 {
+        margin-bottom: 20px !important;
+    }
+    .mb-sm-30 {
+        margin-bottom: 30px !important;
+    }
+    .mb-sm-80 {
+        margin-bottom: 80px !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mb-md-20 {
+        margin-bottom: 20px !important;
+    }
+    .mb-md-25 {
+        margin-bottom: 25px !important;
+    }
+    .mb-md-30 {
+        margin-bottom: 30px !important;
+    }
+    .mb-md-35 {
+        margin-bottom: 35px !important;
+    }
+    .mb-md-120 {
+        margin-bottom: 120px !important;
+    }
+
+    .mt-md-70 {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .mb-lg-30 {
+        margin-bottom: 30px !important;
+    }
+    .mb-lg-140 {
+        margin-bottom: 140px !important;
+    }
+}

@@ -2,6 +2,11 @@
 
 .input {
     position: relative;
+    border-radius: 4px;
+
+    &__wrapper-field {
+        border-radius: 4px;
+    }
 
     &__label {
         position: absolute;
@@ -12,6 +17,7 @@
         color: $color-form-label;
         margin-bottom: 5px;
         transition: top .2s, font-size .2s;
+        z-index: 1;
     }
 
     &__label.input__label_min_top {
@@ -28,7 +34,21 @@
         outline: none;
         border: 1px solid $color-border-input;
         border-radius: 4px;
+        background: transparent;
+        position: relative;
+        z-index: 2;
+        transition: border .15s .05s;
+        vertical-align: top;
+
+        &:before {
+
+        }
     }
+
+    &__text.input__text-textarea {
+        height: auto;
+    }
+
     &__text:focus {
         border: 1px solid $color-border-input-focus;
     }
