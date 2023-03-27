@@ -19,6 +19,12 @@
                 </div>
                 <!-- /.form-floating -->
 
+                <div class="form-check  mb-4">
+                    <input class="form-check-input" type="checkbox" name="type_page_landing" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">Тип страницы лендинг</label>
+                    <p class="fs-13">Если активно, то страница полностью формируется из поля <strong>"Текст статьи"</strong>, то есть свободная конфигурация. В данное поле вставляется вся верстка лендинга. Если отключено, то страница будет сформирована по шаблону, в текст статьи также можно вставлять верстку, но на странице автоматически будет заголовок первого уровня и подзаголовок.</p>
+                </div>
+
                 <div class="form-floating mb-4">
                     <textarea id="textareaExample" name="body" class="form-control" placeholder="Текст статьи" style="height: 150px" required></textarea>
                     <label for="textareaExample">Текст статьи</label>

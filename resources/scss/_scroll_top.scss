@@ -1,0 +1,33 @@
+.scroll-top {
+    width: 46px;
+    height: 46px;
+    position: fixed;
+    bottom: 20px;
+    right: 28px;
+    border-radius: 50%;
+    border: 2px solid $background-blue;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: bottom .2s, visibility .4s .1s, opacity .4s .1s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 7;
+
+    @media screen and (max-width: 576px) {
+        display: none;
+    }
+
+    &__block_show {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility .4s .1s, opacity .4s .1s;
+    }
+
+    &:hover {
+        bottom: 22px;
+        transition: bottom .2s;
+    }
+
+}

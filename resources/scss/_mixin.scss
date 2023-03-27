@@ -1,0 +1,35 @@
+$remBase: 16;
+$widthMin: 320;
+$widthMax: 1320;
+
+@mixin adaptiv-font($valueMin, $valueMax) {
+
+    $fontMin: $valueMin * $remBase;
+    $fontMax: $valueMax * $remBase;
+
+    font-size: $valueMin * 1rem;
+
+    @media (min-width: #{$widthMin}px) {
+        font-size: calc( #{$fontMin}px + (#{$fontMax} - #{$fontMin}) * ((100vw - #{$widthMin}px) / (#{$widthMax} - #{$widthMin})));
+    }
+
+    @media (min-width: #{$widthMax}px) {
+        font-size: $valueMax * 1rem;
+    }
+}
+
+@mixin position-top($value) {
+    top: $value;
+}
+
+@mixin position-right($value) {
+    right: $value;
+}
+
+@mixin position-left($value) {
+    left: $value;
+}
+
+@mixin position-bottom($value) {
+    bottom: $value;
+}

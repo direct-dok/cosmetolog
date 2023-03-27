@@ -1,0 +1,32 @@
+.main-heading {
+    margin-bottom: 30px;
+    border-left: 2px solid #a7a7a7;
+    padding-bottom: 7px;
+
+    @media screen and (max-width: 576px) {
+        border: none;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        @include adaptiv-font(2, 3);
+        margin: 0;
+        padding-left: 10px;
+
+        @media screen and (max-width: 576px) {
+            padding: 0;
+        }
+    }
+
+    &__subtitle {
+        @include adaptiv-font(1, 1.5);
+        font-weight: 300;
+        margin: 0;
+        padding-left: 10px;
+        color: $color-text-label;
+
+        @media screen and (max-width: 576px) {
+            padding: 0;
+        }
+    }
+}

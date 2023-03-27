@@ -1,0 +1,17 @@
+.logo {
+    z-index: 4;
+
+    @media screen and (max-width: 576px) {
+        height: 31px;
+    }
+
+    &__img {
+        height: auto;
+    }
+
+    @media screen and (max-width: 576px) {
+        &__img {
+            max-width: 150px;
+        }
+    }
+}

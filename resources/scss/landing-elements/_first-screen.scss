@@ -1,0 +1,89 @@
+.first-screen {
+    height: 650px;
+    background: $backgrount-first-screen;
+    margin-left: -10px;
+    margin-right: -10px;
+    position: relative;
+
+    @media screen and (max-width: 992px) {
+        height: 570px;
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 490px;
+    }
+
+    @media screen and (max-width: 576px) {
+        height: 400px;
+    }
+
+    &__background-img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__overlay-background-img {
+        background: $backgrount-first-screen;
+        opacity: .7;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+
+
+    }
+
+    &__content {
+        display: flex;
+        align-items: stretch;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        padding: 0 20px 0 10px;
+
+        @media screen and (max-width: 768px) {
+
+        }
+    }
+
+    &__main-title {
+        color: $color-white;
+    }
+
+    &__description {
+        @include adaptiv-font(1, 1.3);
+        color: $color-white;
+    }
+
+    &__right {
+        padding: 0 10px 0 20px;
+    }
+
+    &__left,
+    &__right {
+        flex: 1 1 50%;
+
+        @media screen and (max-width: 768px) {
+            flex: 1 1 100%;
+            padding: 0 10px;
+        }
+    }
+}

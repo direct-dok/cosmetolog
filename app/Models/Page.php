@@ -18,6 +18,7 @@ class Page extends Model
         'seo_title',
         'meta_description',
         'meta_keywords',
+        'type_page_landing',
     ];
     protected $quarded = [];
 
