@@ -8,6 +8,7 @@
     <meta name="keywords" content="@yield('meta_keywords')">
     <meta name="author" content="elemis">
     <title>@yield('seo_title')</title>
+    <meta name="yandex-verification" content="642b45658318dca2" />
     <link rel="shortcut icon" href="{{ asset('/assets/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/page-elements.css') }}">
