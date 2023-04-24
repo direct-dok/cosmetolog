@@ -36,6 +36,9 @@
                         <li class="navigation-block__subnav-item">
                             <a href="{{'/biorepil-v-chelyabinske'}}">Биорепил</a>
                         </li>
+                        <li class="navigation-block__subnav-item">
+                            <a href="{{'/mezoterapiya-v-chelyabinske'}}">Мезотерапия</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="navigation-block__navigation-item">
