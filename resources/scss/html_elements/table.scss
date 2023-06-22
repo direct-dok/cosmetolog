@@ -1,0 +1,68 @@
+.table-flex {
+    display: flex;
+    flex-direction: column;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        border-bottom: 1px solid $color-mercury;
+    }
+
+    &__row:hover:not(&__row_heading) {
+        background: #f2f2f2;
+    }
+
+    &__row_heading {
+        font-weight: bold;
+        background: #DDDDDD;
+        text-transform: uppercase;
+        @include adaptiv-font(.7, .8);
+    }
+
+    &__row:last-child {
+        border-bottom: none;
+    }
+
+    &__item {
+        @include adaptiv-font(.9, 1);
+        margin-right: 10px;
+    }
+
+    &__item:last-child {
+        margin-right: 0;
+    }
+
+    &__item_1 {
+        flex: 1;
+    }
+
+    &__item_2 {
+        flex: 2;
+    }
+
+    &__item_3 {
+        flex: 3;
+    }
+
+    &__item_4 {
+        flex: 4;
+    }
+
+    &__item_5 {
+        flex: 5;
+    }
+
+    &__item_6 {
+        flex: 6;
+    }
+
+    &__item_7 {
+        flex: 7;
+    }
+
+    &__item_8 {
+        flex: 8;
+    }
+}
