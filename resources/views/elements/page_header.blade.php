@@ -1,6 +1,6 @@
 <div class="header container">
     <a href="{{ route('front.page') }}" class="logo">
-        <img src="{{ asset('/img/logo-black.png') }}" class="logo__img" alt="Логотип">
+        <img src="{{ asset('/img/logo-black.png') }}" class="logo__img" alt="Логотип" width="200" height="41">
     </a>
     <div class="header__right">
         <div class="phone">
